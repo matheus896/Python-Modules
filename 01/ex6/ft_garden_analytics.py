@@ -135,6 +135,10 @@ class Seed(Flower):
         super().bloom()
         self.seeds = 42
 
+    def age(self) -> None:
+        self._stats.age_calls += 1
+        self._age += 20
+
     def show(self) -> None:
         super().show()
         print(f"Seeds: {self.seeds}")

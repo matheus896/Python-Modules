@@ -31,7 +31,7 @@ class Plant:
             print("Height update rejected")
         else:
             self._height = float(height)
-            print(f"Height updated: {self._height}cm")
+            print(f"Height updated: {self._height:g}cm")
 
     def get_height(self) -> float:
         return self._height
@@ -42,12 +42,9 @@ if __name__ == "__main__":
     rose = Plant("Rose", 15.0, 10, 0.8)
     print("Plant created: ", end="")
     rose.show()
-    print()
     rose.set_height(25)
     rose.set_age(30)
-    print()
     rose.set_height(-25)
     rose.set_age(-30)
-    print()
     print("Current state: ", end="")
     rose.show()

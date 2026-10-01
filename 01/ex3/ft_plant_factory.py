@@ -13,6 +13,7 @@ class Plant:
     def age(self) -> None:
         self._age += 1
 
+
 def ft_plant_factory() -> None:
     plants: list[Plant] = [
         Plant("Rose", 25, 30),
@@ -25,6 +26,7 @@ def ft_plant_factory() -> None:
     for plant in plants:
         print("Created: ", end="")
         plant.show()
+
 
 if __name__ == "__main__":
     print("=== Plant Factory Output ===")

@@ -1,9 +1,11 @@
-def count(n: int) -> None:
-    for i in range(n):
-        print(f"Day{i + 1}")
+def count(days: int) -> None:
+    if days == 0:
+        return
+    count(days - 1)
+    print(f"Day {days}")
 
 
 def ft_count_harvest_recursive() -> None:
-    days = int(input("Days until harvest: "))
-    count(days)
+    n = int(input("Days until harvest: "))
+    count(n)
     print("Harvest time!")
