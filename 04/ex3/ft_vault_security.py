@@ -29,7 +29,8 @@ def secure_archive(
 
 def main() -> None:
     """Demonstrate secure reads and writes."""
-    source: str = "../ex0/ancient_fragment.txt"
+    directory = __file__.rpartition("/")[0] or "."
+    source: str = directory + "/../ex0/ancient_fragment.txt"
     destination: str = "/tmp/vault_security_archive.txt"
 
     print("=== Cyber Archives Security ===")
