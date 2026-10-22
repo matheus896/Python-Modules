@@ -38,6 +38,7 @@ def main() -> None:
     print(secure_archive("/not/existing/file"))
 
     print("Using 'secure_archive' to read from an inaccessible file:")
+    # Linux equivalent of the subject's /etc/master.passwd; run as non-root.
     print(secure_archive("/etc/shadow"))
 
     print("Using 'secure_archive' to read from a regular file:")
